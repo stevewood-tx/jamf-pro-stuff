@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><extensionAttribute>
+<displayName>Bootstrap Token Status EA</displayName>
+<description/>
+<dataType>string</dataType>
+<scriptContentsMac>#!/bin/bash&#13;
+&#13;
+tokenStatus=$(profiles status -type bootstraptoken | awk '{ print $7 }' | sed 1d)&#13;
+if [ $tokenStatus == "NO" ]&#13;
+then&#13;
+	echo "&lt;result&gt;Not Escrowed&lt;/result&gt;"&#13;
+elif [ $tokenStatus == "YES" ]&#13;
+then&#13;
+	echo "&lt;result&gt;Escrowed&lt;/result&gt;"&#13;
+else&#13;
+	echo "&lt;result&gt;Unknown&lt;/result&gt;"&#13;
+fi</scriptContentsMac>
+</extensionAttribute>
