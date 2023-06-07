@@ -1,4 +1,5 @@
 # JAWA
 
-These are scripts to go along with my blog post on using JAWA to update an Extension Attribute in Jamf Pro.
+In this folder you will find a collection of scripts and posts about using JAWA.
 
+https://github.com/jamf/JAWA
